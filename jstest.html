@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>js测试</title>
+<meta charset="UTF-8" />
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.one {
+		width: 400px;
+		height: 8px;
+		margin: 200px;
+		background-color: #ccc;
+		position: relative;
+	}
+	.one .little {
+		width: 10px;
+		height: 20px;
+		background-color: #037;
+		position: absolute;
+		left: 0;
+		top: -6px;
+		cursor: pointer;
+	}
+	.mask {
+		width: 0;
+		height: 8px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: #037;
+	}
+</style>
+
+</head>
+<body>
+<div id="bar" class="one">
+	<div class="little"></div>
+	<div class="mask"></div>
+</div>
+</body>
+<script>
+	var bar = document.getElementById("bar");
+	var little = bar.children[0];
+	var mask = bar.children[1];
+	little.onmousedown = function(event){
+		var event = event || window.event;
+		var that = this;
+		var leftBar = event.clientX - that.offsetLeft;
+		document.onmousemove = function(event){
+			that.style.left = event.clientX - leftBar + "px";
+			var leftLittle = event.clientX - leftBar;
+			var maxLeft = bar.offsetWidth-that.offsetWidth;
+			if(leftLittle<0){
+				that.style.left = "0px";
+			}
+			else if(leftLittle>maxLeft){
+				that.style.left = maxLeft + "px";
+			}
+			mask.style.width = that.style.left;
+			window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+			document.onmouseup = function(){
+				document.onmousemove = null;
+			}
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,45 @@
+*{
+	margin:0;
+	padding:0;
+	text-decoration: none;
+}
+
+#top{
+	width:1366px;
+	height:31px;
+	margin:0 auto;
+	background:#f2f2f2;
+	border-bottom: 1px solid #ddd;
+}
+#top a#home{
+	display: inline-block;
+	color:#666;
+	/*height: 30px;*/
+	font-size: 12px;
+	line-height: 30px;
+	margin-left: 95px;
+	padding-left: 20px;
+	background-image: url(../images/mogujie.png);
+	background-position: -4px -234px;
+}
+#top ul#topRight{
+	float: right;
+	width:500px;
+	height:30px;
+}
+#top #topRight li{
+	list-style-type: none;
+	color:#666;
+	/*display: inline-block;*/
+	float:left;
+	font-size: 12px;
+	margin-top: 9px;
+}
+#top #topRight li.one{
+	margin-right: 15px;
+}
+#top ul#topRight li.two{	
+	margin-right: 15px;
+	border-left: 1px solid #ddd;
+	padding-left: 25px;
+}

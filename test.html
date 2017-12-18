@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js测试</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background-color: #444;
+		}
+		.box2 {
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="box1"></div>
+	<div class="box2"></div>
+</div>
+	<script type="text/javascript">
+		// var a=prompt("请输入任意一个温度：");
+		// var b=9/5*a+32;
+		// console.log(a+"摄氏度对应的华氏度为"+b);
+		/*var a=Math.pow((23+Math.pow(5,7))/45,2);
+		console.log(a);*/
+		/*var a=prompt("请输入一个六边形的边长：");
+		var b=3*Math.sqrt(3)/2*Math.pow(a,2);
+		console.log("该六边形的面积为"+b);*/
+		/*var a=(1000+6)%7;
+		console.log(a);
+		switch(a){
+			case 0: a="七"; break;
+			case 1: a="一"; break;
+			case 2: a="二"; break;
+			case 3: a="三"; break;
+			case 4: a="四"; break;
+			case 5: a="五"; break;
+			case 6: a="六"; break;
+		}
+		console.log(a);
+		console.log("今天是星期六，那么1000天后是星期"+a+"天");*/
+		/*var a=prompt("请输入一个三位数字:");
+		var b=parseInt(a/100);
+		var c=parseInt(a%100/10);
+		var d=a%10;
+		var x=b+c+d;
+		console.log(a+"各位相加结果为："+x);*/
+		/*var gt=parseInt(prompt("请输入你想加的汽油类型（92或97）："));
+		var num=parseFloat(prompt("请输入你想加多少升："));
+		if(gt==92){
+			if(num<=20){
+				alert("汽油费用是："+num*6+"元");
+			}
+			else if(num>20){
+				alert("汽油费用是："+(20*6+(num-20)*5.9)+"元");
+			}
+		}
+		else if(gt==97){
+			if(num<=30){
+				alert("汽油费用是："+num*7+"元");
+			}
+			else if(num>30){
+				alert("汽油费用是："+(30*7+(num-30)*6.95)+"元");
+			}
+		}*/
+		//水仙花数
+		/*for(var i=100;i<=999;i++){
+			var a=Math.pow(parseInt(i/100),3)+Math.pow(parseInt(i%100/10),3)+Math.pow(i%10,3);
+			if(i==a){
+				console.log(i);
+			}
+		}*/
+		//阶乘
+		/*var sum=1;
+		var a=parseInt(prompt("请输入一个数字："));
+		for(var i=1;i<=a;i++){
+			sum*=i;
+		}
+		console.log(sum);*/
+		//输出因数个数
+		/*var num=parseInt(prompt("请输入一个数字："));
+		var a=0;
+		for(var i=1;i<=num;i++){
+			if(num%i==0){
+				a++;
+			}
+		}
+		alert(num+"一共有"+a+"个因数");*/
+		//找质数（5-1000）
+		/*for(var i=5;i<=1000;i++){
+			var a=true;
+			for(var j=2;j<i;j++){
+				if(i%j==0) a=false;
+			}
+			console.log(a);
+			if(a){
+				console.log(i);
+			}
+		}*/
+		//还可以利用输出因数个数来找！！
+		/*var max=parseInt(prompt("请输入一个数字："));
+		//判断一个数是不是质数
+		function yesOrNo(num){
+    		var amount=0;
+    		for(var i=1;i<=num;i++){
+        		if(num%i==0) amount++;
+    		}
+    		if(amount<=2) return true;
+    		else return false;
+		}
+		for(var i=1;i<=max;i++){
+    		if(yesOrNo(i)) console.log(i);
+		}*/
+		//完美数
+		/*function sum(num){ //求一个数的因数和
+			var nsum=0;
+			for(var i=1;i<num;i++){
+				if(num%i==0){
+					nsum+=i;
+				}
+			}
+			return nsum;
+		}
+		//输出1-10000之间所有完美数
+		for(var i=1;i<=10000;i++){
+			if(i==sum(i)){
+				console.log(i);
+			}
+		}*/
+	</script>
+</body>
+</html>
